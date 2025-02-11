@@ -5,7 +5,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 use Exads\ABTestData;
 
-class DesignPattern
+class PromotionHandler
 {
     private const BASE_URL = 'http://localhost/promotion';
 
@@ -60,7 +60,7 @@ class DesignPattern
 
 // Get promotion data and redirect user to a design
 $promotionId = 3;
-$designPatterns = DesignPattern::fromPromotionId($promotionId); 
+$designPatterns = PromotionHandler::fromPromotionId($promotionId); 
 if(empty($designPatterns)){
    echo "No design patterns found for Promotion ID $promotionId";
    exit;
